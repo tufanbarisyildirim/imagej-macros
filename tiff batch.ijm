@@ -62,11 +62,15 @@ macro "Batch Tiff Enhancement"
 		run("Close-");
 		run("Dilate");
 		run("Close-");
+		run("Dilate");
+		run("Close-");
 	}
 	
 	function mainEnhancementToCurrentSlice()
 	{
 		run("Make Binary","slice"); 
+		run("Close-","slice");
+		run("Dilate","slice");
 		run("Close-","slice");
 		run("Dilate","slice");
 		run("Close-","slice");
